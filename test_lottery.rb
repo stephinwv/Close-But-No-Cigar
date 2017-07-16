@@ -1,18 +1,12 @@
 require "minitest/autorun"
-require_relative "lottery.rb"
+require_relative "Lottery.rb"
 
-class Winning_numbers_test < Minitest::Test
- 	
- 	def test_1_equals_1
- 		assert_equal(1,1)
- 	end
-  	def test_for_empty_array
-  		ticket = []
-  		winning = []
-  	end
-  	def test_winning_num_match
-    	ticket = "1234"
-    	winning = ["1234", "4567", "8901", "2345", "6789"]
-    	assert_equal(["1234"], lottery(ticket, winning))
-  	end
-end
+class TestWinningNumbers < Minitest::Test 
+
+    def test_for_array_containing_winner
+    	my_num = "123466"
+    	winners = ["123966", "256766", "198466", "373666"]
+		assert_equal(["123966"], off_by_one(my_num,winners))
+		
+    end
+end 
