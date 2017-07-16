@@ -1,14 +1,14 @@
 
- def lottery(winners, my_num)
+ def lottery(my_num, winners)
   winning = []
-  # Empty [] to be replaced with with numbers that match my_num
+  # Empty [] to be replaced with with result numbers that match my_num
   if winners.include?(my_num)
   # .include? method checks multiples times for values to be present each time while iterating over an array 
     winning << my_num
   # << in this case adds the numbers to the result array
     p "You Win!"
   else
-    p "Fail"
+    p "No Way!"
   end
   winning
 end
