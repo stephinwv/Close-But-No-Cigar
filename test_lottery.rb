@@ -28,4 +28,9 @@ class TestWinningNumbers < Minitest::Test
 		assert_equal(["123966"], off_by_one(my_num,winners))
 		
     end
+    def test_for_longer_numbers
+    	my_num = "1234567"
+    	winners = ["987615", "1234577", "1345677", "1224567"]
+    	assert_equal(["1234577", "1224567"], off_by_one(my_num, winners))
+    end
  end

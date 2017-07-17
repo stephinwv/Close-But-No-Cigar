@@ -8,16 +8,17 @@
   # << in this case adds the numbers to the result array
     p "You Win!"
   else
-    p "No Way!"
+    p "No match!"
   end
-  winning
+
+  p winning
 end
 
 
 
 
 def off_by_one(my_num, winners)
-    xarray = []
+    off_by = []
    # empty [] to be replace with results from loop
     winners.each do |number|
 # Executes code for each element in the array
@@ -40,11 +41,13 @@ def off_by_one(my_num, winners)
       end
       if c==number.length-1
         # counter for off by one
-        xarray << number
+        off_by << number
+
     end
 
     end
-  xarray
+  print "soooo close"
+  p off_by
 end
 
 
